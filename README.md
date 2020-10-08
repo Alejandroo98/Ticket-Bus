@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 **Ticket Bus**   - LINKEAR -
 
 ------------

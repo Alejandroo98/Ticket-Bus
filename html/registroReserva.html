@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../CSS/registros.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="../CSS/busPeque.css">
+     <link rel="stylesheet" href="../CSS/welcome.css">
+     <link rel="stylesheet" href="../CSS/registros.css">
+      <link rel="stylesheet" href="../CSS/date.css"> 
+      <link rel="stylesheet" href="../CSS/busReservas.css"> 
+      <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+      <link rel="icon" href="../IMG/icono.png">
+
+    <title>Ticket Bus-Reservas</title>
+  </head>
+  <body>
+   
+    
+    <section id="flex" >
+      <div id="fondo" class="navbar">
+        <img src="../IMG/icono.png" alt="Ticket Bus/logo">
+      </div>
+  
+      <div class="text-center " id="navegacion">
+  
+        <a id="home" href="Home.html">HOME</a>
+        <a class="reservas" href="welcome.html">Reservar <span class="iconos"><svg width="1em" height="1em" viewBox="0 0 16 16"
+              class="bi bi-calendar-minus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M5.5 9.5A.5.5 0 0 1 6 9h4a.5.5 0 0 1 0 1H6a.5.5 0 0 1-.5-.5z" />
+              <path fill-rule="evenodd"
+                d="M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1zm1-3a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2z" />
+              <path fill-rule="evenodd"
+                d="M3.5 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5zm9 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5z" />
+            </svg></span></a>
+        <a class="reservas" href="registroReserva.html">Tus reservas <span class="iconos"><svg width="1em" height="1em" viewBox="0 0 16 16"
+              class="bi bi-calendar-check" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
+              <path fill-rule="evenodd"
+                d="M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1zm1-3a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2z" />
+              <path fill-rule="evenodd"
+                d="M3.5 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5zm9 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5z" />
+            </svg></span></a>
+      </div>
+         
+     </section>
+    
+    
+    
+        
+    
+           <div>
+              <p class="text-center " id="welcome"> Welcome, <script>let esperoValga = localStorage.getItem("usuario"); document.write(esperoValga + "!");</script></p>
+            </div> 
+            <div class="text-right" id="logout">
+                <div class="">
+                  <a   class="btn dropdown-toggle " id="tusDatos" data-toggle="dropdown" >Tus datos</a> 
+                  <div class="dropdown-menu">
+                    <a class="menuBoton dropdown-item text-center text-center mr-5" id="correoElectronico" href="#"></a>
+                    <a class="menuBoton dropdown-item text-center" id="numeroDeCedula" href="#"></a>
+                   
+                    <div class="dropdown-divider"></div>
+                    <a class="menuBoton dropdown-item text-center" href="../index.html">Cerrar sesion</a>
+                  </div>
+                </div>
+              </div>
+              
+              
+           
+    
+
+
+
+   <hr>
+   <h1 id="aunNoTienesReservas" class="container-fluid text-center">Aun no tienes reservas</h1>
+   <div id="contenedorTabla" style="display: none;">
+    <h1 class="h3 text-center mb-5">Tus reservas</h1>
+    
+    <div  class="container text-center ">
+      <div class="table-responsive">
+    <table class="table border  table-hover table-bordered" id="tablaDeReervas" >
+      <thead>
+        <tr>
+          <th>Ruta</th>
+          <th>Precio por asiento</th>
+          <th>Numero de asientos</th>
+          <th>Fecha y hora de salida</th>
+          <th>Total a pagar</th>
+          <th>Cancelar/Editar</th>
+        </tr>
+      </thead >
+     <tbody >
+    </tbody>
+   </table>
+  </div>
+  </div>
+</div>
+
+
+
+     <div id="contenedorTablaEditar">
+     <!--  <p class="h5 text-center">Edita tu reserva</p>
+      <div class="table-responsive">
+
+    <div  class="container text-center">
+    <table class="table border table-hover table-bordered " id="tablaDeReervas" >
+      <thead>
+        <tr>
+          <th>Ruta</th>
+          <th>Precio</th>
+          <th>Asientos reservados</th>
+          <th>Fecha de salida</th>
+          <th>Cancelar/Editar</th>
+        </tr>
+      </thead >
+     <tbody >
+     <form action="">  
+      <tr>
+      <td id="rutaNueva"></td>
+       <td id="precioNuevo"></td>
+       <form action="">
+       <td ><input id="asientosEditar" type="number" ></td>
+       <td ><input id="fechaEditar" type="date"></td>
+       <td  id="guardar"><button  onclick="guardarDatosNuevos()">Guardar</button><button id="cancelar">Cancelar</button></td>
+      </form>
+     </tr>
+    </form>
+    </tbody>
+   </table>
+  </div>
+</div> -->
+
+<!-- BOTONES DE OPCIONES PARA EDITAR -->
+<div class="container " id="botonesEditar">
+  <div class="row">
+    <div class="botonesHover col-sm-12 col-md mt-sm-5 mt-md-3">
+      <button class="rutaEditar" value="ruta" >Ruta<span class="material-icons float-right">
+        near_me
+        </span></button>
+        <div class="editarRutas">
+          <a href="#" id="quitoGuayaquil"  >Quito-Guayaquil</a>
+          <a href="#" id="quitoCuenca" >Quito-Cuenca</a>
+        </div>
+    </div>
+    <div class="botonesHover col-sm-12 col-md mt-sm-5 mt-md-3">
+      <button class="numeroAsientosEditar"  value="numeroAsiento">Numero de asientos<span class="material-icons float-right">
+        airline_seat_legroom_extra
+        </span></button>
+
+        <!-- BUS -->
+
+
+        <div class="ocultarBus1 mt-4" >
+          <div class="">
+           <div class="">
+           </div>
+           <div class="col">
+                 <div class="asientosDelFianal1 ">
+                         <div class="cuadrado1 imagen1">
+                             <img src="../IMG/bus proyecto integrador3.png" alt="">
+                                 <div class="container botones1">
+                                     
+                                     <div class="links row"  >
+                                             
+                                             <a  id="V1" onclick="v1(V1)" class="primeraFilas col-3 ">V1</a>
+                                             <a  id="P2" onclick="p2(P2)" class="primeraFilas col-3  ">P2</a>
+                                             <a  id="P17" onclick="p17(P17)" class="pasilloFilas col-3 ">P17</a>
+                                             <a  id="V18"  onclick="v18(V18)" class="ventanaFilas col-3  ">V18</a>
+                                     </div>
+                                    
+                                     <div class="links2 row "  >
+                                         <a  id="V3" onclick="v3(V3)" class="primeraFilas col-3 ">V3</a>
+                                         <a  id="P4" onclick="p4(P4)" class="primeraFilas col-3">P4</a>
+                                         <a  id="P19" onclick="p19(P19)" class="pasilloFilas col-3">P19</a>
+                                         <a  id="V20" onclick="v20(V20)" class="ventanaFilas col-3">V20</a>
+                                 </div>
+             
+                                 <div class="links2 row "  >
+                                     <a  id="V5" onclick="v5(V5)" class="primeraFilas col-3 ">V5</a>
+                                     <a  id="P6" onclick="p6(P6)" class="primeraFilas col-3">P6</a>
+                                     <a  id="P21" onclick="p21(P21)" class="pasilloFilas col-3">P21</a>
+                                     <a  id="V22" onclick="v22(V22)" class="ventanaFilas col-3">V22</a>
+                             </div>
+             
+                             <div class="links2 row "  >
+                                 <a  id="V7" onclick="v7(V7)" class="primeraFilas col-3 ">V7</a>
+                                 <a  id="P8" onclick="p8(P8)" class="primeraFilas col-3">P8</a>
+                                 <a  id="P23" onclick="p23(P23)" class="pasilloFilas col-3">P23</a>
+                                 <a  id="V24" onclick="v24(V24)" class="ventanaFilas col-3">V24</a>
+                         </div>
+             
+                         <div class="links2 row " >
+                             <a  id="V9" onclick="v9(V9)" class="primeraFilas col-3 ">V9</a>
+                             <a  id="P10" onclick="p10(P10)" class="primeraFilas col-3">P10</a>
+                             <a  id="P25" onclick="p25(P25)" class="pasilloFilas col-3">P25</a>
+                             <a  id="V26" onclick="v26(V26)" class="ventanaFilas col-3">V26</a>
+                     </div>
+             
+                     <div class="links2 row "  >
+                         <a  id="V11" onclick="v11(V11)" class="primeraFilas col-3 ">V11</a>
+                         <a  id="P12" onclick="p12(P12)" class="primeraFilas col-3">P12</a>
+                         <a  id="P27" onclick="p27(P27)" class="pasilloFilas col-3">P27</a>
+                         <a  id="V28" onclick="v28(V28)" class="ventanaFilas col-3">V28</a>
+                 </div>
+                 <div class="links2 row "  >
+                     <a  id="V13" onclick="v13(V13)" class="primeraFilas col-3 ">V13</a>
+                     <a  id="P14" onclick="p14(P14)" class="primeraFilas col-3">P14</a>
+                     <a  id="P29" onclick="p29(P29)" class="pasilloFilas col-3">P29</a>
+                     <a  id="V30" onclick="v30(V30)" class="ventanaFilas col-3">V30</a>
+             </div>
+             
+             <div class="links2 row "  >
+                 <a  id="V15" onclick="v15(V15)" class="primeraFilas col-3 ">V15</a>
+                 <a  id="P16" onclick="p16(P16)" class="primeraFilas col-3">P16</a>
+                 <a  id="P31" onclick="p31(P31)" class="pasilloFilas col-3">P31</a>
+                 <a  id="V32" onclick="v32(V32)" class="ventanaFilas col-3">V32</a>
+             </div>
+             
+             
+                                 </div>
+                         </div>
+             
+                            <div  class="asientosFinal1 container">
+                             <div class="row"  >
+                                 <a  id="V33" onclick="v33(V33)" class="col">V33</a>
+                                 <a  id="P34" onclick="p34(P34)" class="col">P34</a>
+                                 <a  id="P35" onclick="p35(P35)" class="col">P35</a>
+                                 <a  id="P36" onclick="p36(P36)" class="col">P36</a>
+                                 <a  id="V37" onclick="v37(V37)" class="col">V37</a>
+             
+                              </div>
+                          </div>
+                         </div>
+                       </div>
+
+
+                       <div class=" container  col col-sm-12 col-md-12 col-lg mt-5 " >
+                        <div class="row ">
+                      <div class=" col-sm-12 col-md-12 col-lg-12 col-xl-12 " style="display: none;" id="ocultarPrecio">
+                        <table class="table text-center border" id="tabla" >
+                          <thead class="" >
+                            <tr>
+                              <th class="" id="totalPagara " >Total a pagar</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="" id="tablaAsientos"></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>  
+                        </div>
+                       </div>
+                         
+                      
+          </div>
+        </div>
+        
+        
+        
+        <!-- FIN BUS -->
+        
+         
+    </div>
+    <div class="botonesHover col-sm-12 col-md mt-sm-5 mt-md-3">
+      <button class="fechaEditar" value="fecha">Fecha<span class="material-icons float-right">
+        calendar_today
+        </span></button>
+        <!-- DATE -->
+        
+          <div class="ocultarFecha date-picker">
+            <div class="selected-date"></div>
+            <div class="dates">
+              <div class="month">
+                <div class="arrows prev-mth">&lt;</div>
+                <div class="mth"></div>    
+                <div class="arrows next-mth">&gt;</div>
+              </div>
+                <div class=" days"></div>
+              </div>
+            </div>
+        
+      </div>
+        
+      <!-- FIN DATE -->
+    <div class="botonesHover col-sm col-md mt-sm-5 mt-md-3">
+      <button class="horaEditar" value="hora">Hora<span class="material-icons float-right">
+        schedule
+        </span></button>
+        <div class="editarHora">
+          <a href="#" id="seisAm" >06:30 AM</a>
+          <a href="#" id="nueveAm" >09:30 AM</a>
+          <a href="#" id="diezAm" >10:30 AM</a>
+          <a href="#" id="cincoPm" >05:00 PM</a>
+          <a href="#" id="ochoPm" >08:00 PM</a>
+        </div>
+    </div>
+  </div>
+</div>
+
+<!-- FIN BOTONES DE OPCIONES PARA EDITAR -->
+
+<!-- OPCIONES DE BOTONES DE OPCIONES PARA EDITAR -->
+
+
+<div class="text-center mt-5 guardarCambios">
+  <a href="registroReserva.html" id="guardarCambios" class="" onclick="guardarCambios()">Guardar Cambios</a>
+  <a href="" class="" id="cancelar">Cancelar</a>
+</div>
+</div>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<!-- FINOPCIONES DE BOTONES DE OPCIONES PARA EDITAR -->
+
+<!-- DATE -->
+
+<!-- <div class="date-picker">
+  <div class="selected-date"></div>
+
+  <div class="dates">
+    <div class="month">
+      <div class="arrows prev-mth">&lt;</div>
+      <div class="mth"></div>
+      <div class="arrows next-mth">&gt;</div>
+    </div>
+
+    <div class="days"></div>
+  </div>
+</div> -->
+
+
+
+<!-- FIN DATE -->
+
+
+
+
+
+
+    
+    
+    <script>
+
+$respuestaOcultarTrueFalse = localStorage.getItem("guardarOcultarTrueFalse");
+if($respuestaOcultarTrueFalse){
+    const noReservas = document.querySelector("#aunNoTienesReservas")
+    noReservas.setAttribute("style", "display: none;")
+
+}
+
+
+
+      function editarReserva(){
+    
+  
+    document.getElementById("contenedorTablaEditar").style.display="block"; 
+    document.getElementById("boton1").style.display="none"; 
+  
+  }
+
+      
+
+      rutaGuardada = localStorage.getItem("datosDeRuta")
+      totalPagar = localStorage.getItem ("totalPagar");
+      asientosConfirmados  = localStorage.getItem("guardarAsientos");
+      fechaConfirmada =localStorage.getItem("guardarFecha");
+      precioConfirmado = localStorage.getItem("precioTabla");
+      numeroAsientos = localStorage.getItem("asientosReservados");
+      horaSalida = localStorage.getItem("asientosReservadosGuardar")
+      asientosGuardados= document.getElementById("tablaDeReervas").innerHTML += 
+      '<div id="esconderCuerpo"><td>'+rutaGuardada+'</td><td>'+precioConfirmado+" $" + '</td> <td>'+numeroAsientos+'</td> <td>'+fechaConfirmada +' / ' +horaSalida+'</td><td>'+totalPagar+" $" + '</td><td> <a  href="registroReserva.html"  onclick="holaMundo()"   id="boton1">Cancelar</a> <a id="botonEditar" onclick="editarReserva()">Editar</a> </td></tr></div>'
+     
+        /* var00 = document.getElementById("rutaNueva")
+        var01 = document.getElementById("precioNuevo")
+        var00.innerHTML = rutaGuardada;
+        var01.innerHTML = precioConfirmado */
+      
+  
+     /*  function guardarDatosNuevos(){
+             eliminarDatosAnteriores()
+            asientosEditarGuardar = document.getElementById("asientosEditar");
+             fechaEditarGuardar = document.getElementById("fechaEditar");
+             localStorage.setItem("guardarAsientos", asientosEditarGuardar.value);
+            localStorage.setItem("guardarFecha", fechaEditarGuardar.value);
+           // asientosConfirmados=localStorage.getItem("asientosEditarGuardado");
+            //fechaConfirmada=localStorage.getItem("guardar");
+            
+           asientosConfirmados= document.getElementById("tablaDeReervas").innerHTML = 
+           '<div id="esconderCuerpo"><td>'+rutaGuardada+'</td><td>'+precioConfirmado+'</td> <td>'+asientosConfirmados+'</td><td>'+fechaConfirmada+'</td><td><a onclick="holaMundo()"  id="boton1">Eliminar</a> <button onclick="editarReserva()">Editar</button ></td></tr></div>'
+    
+          } */
+
+
+          boton1.onclick = function (){
+           localStorage.removeItem("guardarOcultarTrueFalse") 
+           localStorage.removeItem("guardarTrueFalse")
+          }
+
+function eliminarDatosAnteriores(){
+  localStorage.removeItem("guardarFecha");
+  localStorage.removeItem("guardarAsientos");
+}
+
+     
+
+
+
+
+     
+
+
+
+
+          function holaMundo(){
+        document.getElementById("contenedorTabla").style.display="none";  
+       /*  holaMundo.innerHTML = "href='www.gogle.oc'" */
+        localStorage.removeItem("guardarAsientos");     
+        localStorage.removeItem("guardarFecha");     
+} 
+       
+      
+
+      
+    </script>
+ 
+    <!--PRUEBA-->
+    
+    
+    
+    <!--FIN PRUEBA-->
+    
+    <!--<script>
+      fecha = new Date()
+      document.write(fecha)
+      document.write(fecha.getHours()) 
+      document.write(fecha.getMinutes())
+      document.write(fecha.Day())
+      document.write(fecha.Day())
+      document.write(fecha.getFullYear())
+
+    </script> -->
+    <script src="../JS/busRservas.js"></script>
+    <script src="../JS/date.js"></script>
+    <script src="../JS/registrarse.js"></script>
+  <script src="../JS/welcome.js"></script>
+   <script src="../JS/app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+
+
+
+
+

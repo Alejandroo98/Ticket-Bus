@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-**Ticket Bus**   - LINKEAR - :tw-1f68c:
+**Ticket Bus**   - LINKEAR -
 
 ------------
 

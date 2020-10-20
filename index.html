@@ -1,122 +1,131 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-   <link rel="icon" href="/IMG/icono.png">
+    <link rel="icon" href="/IMG/icono.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ticket Bus</title>
     <link rel="stylesheet" href="CSS/estilos.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
-    
+
 </head>
+
 <body>
+
     <div id="formLogin">
-    <form action="" method="POST" id="form">
-        <div class="form">
-            <h1 class="ticket-bus">Ticket Bus</h1>
-            
+        <form action="conexionbdd/login.php" method="GET" id="form">
+            <div class="form">
+                <h1 class="ticket-bus">Ticket Bus</h1>
+
                 <h4 class="login">LOGIN</h4>
-            
-            
-            <div class="grupo">
-                <input type="text" name="" id="email" ><span class="barra"></span>
-                <label for="">Usuario</label>
+
+
+                <div class="grupo">
+                    <input type="text" name="usuario" id="usuario"><span class="barra"></span>
+                    <label for="">Usuario</label>
+                </div>
+                <div class="grupo">
+                    <input type="password" id="pass" name="pass"><span class="barra"></span>
+                    <label for="">Contraseña</label>
+                </div>
+
+                <input type="submit" name="" value="INGRESAR"
+                style="border: 1px solid black; background-color: black; color: white;">
             </div>
-            <div class="grupo">
-                <input type="password" name="" id="password" ><span class="barra"></span>
-                <label for="">Contraseña</label>
+            <div>
+                <a href="#" id="Olvide" class="clave">Olvide mi contraseña</a>
+                <a href="#" onclick="ocultarLogin()" class="clave">Crear Cuenta</a>
             </div>
-            
-            <button id="boton" onclick="entrarLogin(email.value, password.value)" type="button">Login</button>
+        </form>
+    </div>
+
+    <!-- Olvide contraseña -->
+
+    <form class="ocultarOlvide" method="" id="form">
+        <div class="">
+            <h1 class="ticket-bus">Ticket Bus</h1>
+
+            <h4 class="login">RECUPERAR</h4>
+            <h4 class="login">
+                <h4 class="login">CUENTA</h4>
+            </h4>
+
+
+            <div class="grupo">
+                <input type="text" name="" id="email"><span class="barra"></span>
+                <label for="">Ingresa tu email</label>
+            </div>
+
+
+            <button id="boton" type="">Recuperar</button>
             <p class="warnings" id="warnings"></p>
         </div>
-                <div>
-                 <a href="#" id="Olvide" class="clave">Olvide mi contraseña</a>
-                 <a href="#" onclick="ocultarLogin()" class="clave">Crear Cuenta</a>
-            </div>
+        <div>
+            <a href="" class="clave">Iniciar Sesion</a>
+            <a href="#" onclick="crearCuenta2()" class="clave">Crear Cuenta</a>
+        </div>
     </form>
-      </div>
-
-<!-- Olvide contraseña -->
-
-<form class="ocultarOlvide"  method="" id="form">
-    <div class="">
-        <h1 class="ticket-bus">Ticket Bus</h1>
-        
-            <h4 class="login">RECUPERAR</h4>
-            <h4 class="login"><h4 class="login">CUENTA</h4></h4>
-        
-        
-        <div class="grupo">
-            <input type="text" name="" id="email" ><span class="barra"></span>
-            <label for="">Ingresa tu email</label>
-        </div>
-        
-        
-        <button id="boton" type="">Recuperar</button>
-        <p class="warnings" id="warnings"></p>
-    </div>
-            <div>
-             <a href="" class="clave">Iniciar Sesion</a>
-             <a href="#"  onclick="crearCuenta2()" class="clave" >Crear Cuenta</a>
-        </div>
-</form>
 
 
-<!-- Fin Olvide contraseña -->
+    <!-- Fin Olvide contraseña -->
 
 
 
-     
-    <form action="" method="POST" id="formRegister">
+
+    <form action="./conexionbdd/register.php" method="GET" id="formRegister">
         <div class="form">
             <h1 class="ticket-bus">Ticket Bus</h1>
-            
-                <h4 class="login">REGISTER</h4>
-            
-            
+
+            <h4 class="login">REGISTER</h4>
+
+
             <div class="grupo">
-                <input type="text" id="datoUsuario"  ><span class="barra"></span>
+                <input type="text" id="usuario" name="usuario"><span class="barra"></span>
                 <label for="">Usuario</label>
             </div>
             <div class="grupo">
-                <input type="text" id="datoEmail"  ><span class="barra"></span>
+                <input type="text" id="email" name="email"><span class="barra"></span>
                 <label for="">Email</label>
             </div>
             <div class="grupo">
-                <input type="text" id="datoCedula" name=""  ><span class="barra"></span>
-                <label >Numero de cedula</label>
+                <input type="text" id="cedula" name="cedula"><span class="barra"></span>
+                <label>Numero de cedula</label>
             </div>
             <div class="grupo">
-                <input type="password" name="" id="datoContraseña" ><span class="barra"></span>
-                <label >Crear constraseña</label>
+                <input type="password" name="pass" id="pass"><span class="barra"></span>
+                <label>Crear constraseña</label>
             </div>
-            
-            <button id="" onclick="registroDeDatos(datoUsuario.value, datoContraseña.value, datoEmail.value, datoCedula.value)"  type="button">Registrarse</button>
+
+
+            <input type="submit" name="" value="ENVIAR"
+                style="border: 1px solid black; background-color: black; color: white;">
+
             <p class="warnings" id="warnings"></p>
         </div>
-                <div>
-                 <a href="#" onclick="ocultarRegister2()" class="clave">Iniciar sesion</a>
-            </div>
-        </form>
-                <section>
-                    <div class="container  ocultarBienvenido">
-                        <div class="row">
-                            <div class="col">
-                                <div class="cajaBienvenido">
-                                    <h2 class="bienvenido-login">Bienvenido!</h2>
-                                    <p><a href="#" id="bienvenidoSesion">Inicia Sesion </a> para continuar...</p>
-                                </div>
-                            </div>
-                        </div>
+        <div>
+            <a href="#" onclick="ocultarRegister2()" class="clave">Iniciar sesion</a>
+        </div>
+    </form>
+    <section>
+        <div class="container  ocultarBienvenido">
+            <div class="row">
+                <div class="col">
+                    <div class="cajaBienvenido">
+                        <h2 class="bienvenido-login">Bienvenido!</h2>
+                        <p><a href="#" id="bienvenidoSesion">Inicia Sesion </a> para continuar...</p>
                     </div>
-                </section>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
-    
 
-   <script src="JS/app.js"></script> 
+
+    <script src="JS/app.js"></script>
     <script src="JS/registrarse.js"></script>
-    
+
 </body>
+
 </html>

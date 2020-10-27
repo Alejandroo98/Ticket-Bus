@@ -8,7 +8,6 @@ bp17 = false; bp19 = false; bp21 = false; bp23 = false; bp25 = false; bp27 = fal
 bv33 = false; bp34 = false; bp35 = false; bp36 = false; bv37 = false; //ASIENTOS FINALES
 dinero = false;
 //CONSTRUCTOR DE OBJETO
-/* var basePagar =  []; */
 dineroEfectivo.onclick = function (){
     saltoDos = document.querySelector("#salto");
     dineroEfectivoDos = document.querySelector("#dineroEfectivo");

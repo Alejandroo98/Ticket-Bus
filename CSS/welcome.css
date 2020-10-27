@@ -1,6 +1,7 @@
 body{
     background-size: cover;
-    background-image: url(/IMG/imagenes/mapa5-01.jpg);
+    background-color: rgb(255, 255, 255);
+    /* background-image: url(/IMG/imagenes/mapa5-01.jpg); */
     background-size: cover;
 }
 

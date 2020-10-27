@@ -8,7 +8,7 @@ const days_element = document.querySelector('.date-picker .dates .days');
 
 const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
-let date = new Date();
+let date = new Date() ;
 let day = date.getDate();
 let month = date.getMonth();
 let year = date.getFullYear();

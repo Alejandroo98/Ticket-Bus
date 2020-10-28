@@ -1,0 +1,111 @@
+
+#boton1{
+    border: 1px solid #d10707;
+    color: #d10707;
+    border-radius: 4px;
+    text-decoration: none;
+    padding: 2px;
+}
+
+#botonEditar{
+    border: 1px solid #2c2c2c;
+    color: #2c2c2c;
+    border-radius: 4px;
+    text-decoration: none;
+    padding: 1px 4px;
+    cursor: pointer;
+}
+
+#botonEditar:hover{
+    background:#2c2c2c ;
+    color: #fffefe;
+}
+
+
+#boton1:hover{
+    background-color: #d10707;
+    color: white;
+}
+
+#guardarCambios{
+    background:#2c2c2c;
+    cursor: pointer;
+    border-radius: 4px;
+    color: white;
+    padding: 7px 9px;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    display: none;
+}
+
+.guardarCambios{
+    position: relative;
+    
+}
+
+
+#guardarCambios:hover{
+    background:#131212 ;
+}
+
+#cancelar{
+    border: 1px solid #d32020;
+    border-radius: 4px;
+    color: #d32020;
+    text-decoration: none;
+    padding: 6px 9px;
+
+}
+
+#cancelar:hover{
+    background:#d32020 ;
+    color: white    ;
+}
+
+#contenedorTabla{
+margin-top: 50px;
+}
+
+
+
+#aunNoTienesReservas{
+    position: fixed;
+   margin-top: 50px;  
+   color: rgba(0, 0, 0, 0.541); 
+   
+}
+
+
+#pruebaPrueba{
+display: none;
+
+}
+
+#guardar button{
+    background-color: rgba(0, 143, 187, 0.514);
+    
+}
+
+#guardar button:hover{
+    background-color: rgba(51, 154, 185, 0.842);
+    
+}
+#contenedorTablaEditar{
+    display: none;
+}
+
+#guardar #cancelar{
+    background-color: rgba(255, 0, 0, 0.473);
+}
+
+#guardar #cancelar:hover{
+    background-color: rgba(255, 0, 0, 0.596);
+}
+
+
+
+.editarHora{
+    display: none;
+}
+

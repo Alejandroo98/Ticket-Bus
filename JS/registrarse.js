@@ -14,6 +14,7 @@ function entrarLogin(usuarioRegister, claveRegister){
     })
     if (validacionUsuario == true){
         localStorage.setItem("usuario", usuarioRegister)
+<<<<<<< HEAD
         alert("Sesion iniciada correctamente");
   
         window.open("..//TICKET-BUS-SALAZAR/html/Home.html" , '_self')
@@ -21,6 +22,13 @@ function entrarLogin(usuarioRegister, claveRegister){
     }else{
         alert("Usuario o contraseña incorrecto");
       
+=======
+        parrafo.innerHTML = "Redirigiendo"
+        window.open("..//PROYECTO_INTEGRADOR/html/Home.html" , '_self')
+        
+    }else{
+        parrafo.innerHTML = `Usuario o contraseña incorrecto. <br>`
+>>>>>>> 670d09d0275d17e79cbe84f5f4a81c90aa20a2a6
        
 
     }
